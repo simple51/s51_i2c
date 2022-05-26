@@ -147,7 +147,12 @@ void test_i2cRead(void)
     }
 }
 
-void bsp_init(void)
+void main(void)
 {
     bsp_i2c_AllInit();
+    while (1)
+    {
+        test_i2cRead();
+        // delay
+    }
 }
